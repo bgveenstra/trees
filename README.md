@@ -120,6 +120,7 @@ Note that each "node" is acutally an instance of `BinarySearchTree`.
 
 	```python
 
+
 	def search(tree, val)
 		current_node = tree
 		while current_node != "None"
@@ -170,7 +171,6 @@ Note that each "node" is acutally an instance of `BinarySearchTree`.
 
 	```python
 
-
 	def lowest_common_ancestor(node1, node2)
 		current1 = node1
 		current2 = node2
@@ -182,23 +182,26 @@ Note that each "node" is acutally an instance of `BinarySearchTree`.
 				return current1
 			else
 				node1_ancestors.add(current1)
+
 			current2 = current2.parent
 			if current2 in node1_ancestors
 				return current2
 			else
 				node2_ancestors.add(current2)
+
 		while current1.parent != "None"
 			current1 = current1.parent
 			if current1 in node2_ancestors
 				return current1
+
 		while current2.parent != "None"
 			current2 = current2.parent
 			if current2 in node1_ancestors
 				return current2
 	```
 
-
 1. A "min heap" is another abstract data structure often thought of as a type of binary tree. It has a restriction called the "min heap property:" every node's value is less than the values of its children. What is special about the root of a min heap?  
+
 
 
 ### Tries
